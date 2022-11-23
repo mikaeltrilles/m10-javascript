@@ -24,7 +24,7 @@ npm install
 
 ## 3. Usage
 
-### 3.1. Run the application
+### 3.1. Run the tests
 
 For test purposes, you can run the application with the following command:
 
@@ -35,3 +35,7 @@ Exemple :
 ```bash
 node tp3-affichage1a10.js
 ```
+
+### 3.2. Run the application
+  
+  Open the file tp08-addition.html in your browser, enter 2 numbers click on button and check the result in the page.
