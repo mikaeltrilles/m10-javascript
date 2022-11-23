@@ -22,6 +22,7 @@ function operation() {
   // Contrôle de saisie
   if (isNaN(nb1) || isNaN(nb2)) {
     document.getElementById("resultat").innerHTML = "Veuillez saisir des nombres";
+    document.getElementById("resultat").style.color = "red";
   } else {
     // Calcul du résultat
     switch (operation) {
@@ -41,6 +42,11 @@ function operation() {
 
     // Affichage du résultat
     document.getElementById("resultat").innerHTML = `Le résultat de ${(((operation) == "addition" ? "l'" : "la "))} ${operation} est : ${resultat}`;
+    document.getElementById("resultat").style.color = "white";
+    document.getElementById("resultat").style.backgroundColor = "green";
+    
     console.log(operation);
   }
 }
+
+operation();

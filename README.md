@@ -38,4 +38,20 @@ node tp3-affichage1a10.js
 
 ### 3.2. Run the application
   
-  Open the file tp08-addition.html in your browser, enter 2 numbers click on button and check the result in the page.
+  Open the file tp08-XXXXXXXX.html in your browser and check the result in the page.
+
+### 3.3. Last Update
+
+  For the page tp08-affichage-json.html, I use :
+
+- [bootstrap](https://getbootstrap.com/) for the style.
+- [Drapeaux du monde](https://www.drapeauxdespays.fr/) for the flags. With this link <https://www.drapeauxdespays.fr/data/flags/w580/${pays.code}.webp> for the flags.
+
+Exemple :
+ttps://www.drapeauxdespays.fr/data/flags/w580/fr.webp
+
+![Chine](https://www.drapeauxdespays.fr/data/flags/w580/fr.webp)
+
+## 4. Authors
+
+Made with :heart: by [Mikael Trilles](https://www.linkedin.com/in/mikaeltrilles/)

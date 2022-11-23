@@ -6,21 +6,30 @@
 // •       Si  l’utilisateur  n’a  pas  respecté  un  des  contrôles  ci-dessus,  un  message  d’erreur 
 // s’affiche sur fond rouge dans la page persistant tant que l’utilisateur n’a pas corrigé 
 
-// Declaration des variables
-var nom = document.getElementById("nom").value;
-var prenom = document.getElementById("prenom").value;
-var date = document.getElementById("date").value;
-var message = document.getElementById("message");
+//declaration des variables nom prenom date
+var nom, prenom, date;
 
+//fonction de controle
 
+// Fonction de controle des element du formulaire
+function formulaire(e) {
 
-
-const formulaire = () => {
-  if (nom == "" || prenom == "" || date == "") {
-    return (message.style.backgroundColor = "red"
-      , message.innerHTML = "Veuillez remplir tous les champs");
+  nom = document.getElementById("nom").value ? document.getElementById("nom").value : "";
+  prenom = document.getElementById("prenom").value ? document.getElementById("prenom").value : "";
+  date = document.getElementById("date").value ? document.getElementById("date").value : false;
+  if (nom == "" || prenom == "" || date == false) {
+    document.getElementById("message").innerHTML = "Veuillez remplir tous les champs";
+    document.getElementById("message").style.backgroundColor = "red";
   } else {
-    return (message.style.backgroundColor = "green",
-      message.innerHTML = "Formulaire envoyé");
+    document.getElementById("message").innerHTML = "Formulaire envoyé. Bienvenue " + prenom + " " + nom;
+    document.getElementById("message").style.backgroundColor = "green";
   }
-};
+} 
+
+
+console.log(nom);
+console.log(prenom);
+console.log(date);
+
+//appel de la fonction
+formulaire();
