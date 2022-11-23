@@ -48,7 +48,7 @@ node tp3-affichage1a10.js
 - [Drapeaux du monde](https://www.drapeauxdespays.fr/) for the flags. With this link <https://www.drapeauxdespays.fr/data/flags/w580/${pays.code}.webp> for the flags.
 
 Exemple :
-ttps://www.drapeauxdespays.fr/data/flags/w580/fr.webp
++ https://www.drapeauxdespays.fr/data/flags/w580/fr.webp
 
 ![Chine](https://www.drapeauxdespays.fr/data/flags/w580/fr.webp)
 
