@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en-us">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Shopping list example</title>
+  <style>
+    li {
+      margin-bottom: 10px;
+    }
+
+    li button {
+      font-size: 12px;
+      margin-left: 20px;
+      color: #666;
+    }
+  </style>
+</head>
+
+<body>
+
+  <h1>My shopping list</h1>
+
+  <div>
+    <label for="item">Enter a new item:</label>
+    <input type="text" name="item" id="item">
+    <button>Add item</button>
+  </div>
+
+  <ul>
+
+  </ul>
+
+  <script>
+    const list = document.querySelector('ul');
+    const input = document.querySelector('input');
+    const button = document.querySelector('button');
+
+    button.addEventListener('click', () => {
+      const myItem = input.value;
+      input.value = '';
+
+      const listItem = document.createElement('li');  // Créez un élément <li> et stockez-le dans une variable
+      const listText = document.createElement('span');  // Crée un élément <span> pour contenir le contenu textuel de l'élément à ajouter à la liste
+      const listBtn = document.createElement('button'); // Créez un élément <button> pour contenir le contenu textuel du bouton à ajouter à la liste
+
+      listItem.appendChild(listText); // Ajouter le nœud de texte à l'élément <li>
+      listText.textContent = myItem;  // Définissez le contenu du texte de l'élément <span> sur la valeur de l'élément d'entrée
+      listItem.appendChild(listBtn);  //Ajouter le bouton à l'élément <li>
+      listBtn.textContent = 'Delete'; // Définissez le contenu du texte de l'élément <button> sur 'Delete'
+      list.appendChild(listItem);    // Ajouter l'élément <li> à l'élément <ul>
+
+      listBtn.addEventListener('click', function () {
+        list.removeChild(listItem); // Supprimez l'élément <li> de l'élément <ul>
+        console.log(this);
+      });
+
+      input.focus();  // Remettre le focus sur l'élément d'entrée
+
+    });
+  </script>
+</body>
+<!-- Soursce du cours
+    https://developer.mozilla.org/fr/docs/Learn/JavaScript/Client-side_web_APIs/Manipulating_documents#apprentissage_actif_manipulations_basiques_du_dom -->
+
+</html>
